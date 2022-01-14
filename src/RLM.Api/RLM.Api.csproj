@@ -8,6 +8,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityframeworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityframeworkCore.Relational" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityframeworkCore.SqlServer" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
