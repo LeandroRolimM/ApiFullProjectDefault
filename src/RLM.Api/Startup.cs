@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RLM.Api.Configuration;
+using RLM.Data.Contexts;
 
 namespace RLM.Api
 {
@@ -38,10 +41,13 @@ namespace RLM.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddIdentityConfiguration(Configuration);
+
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddApiConfiguration(Configuration);
+
             services.ResolveDependencies();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
 
