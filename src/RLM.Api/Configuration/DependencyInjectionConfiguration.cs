@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using RLM.Business.Interfaces;
+using RLM.Business.Notifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,7 @@ namespace RLM.Api.Configuration
     {
         public static IServiceCollection ResolveDependencies(this IServiceCollection services)
         {
+            services.AddScoped<INotificador, Notificador>();
 
             return services;
         }

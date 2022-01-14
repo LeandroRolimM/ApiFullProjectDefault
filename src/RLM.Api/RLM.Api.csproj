@@ -14,4 +14,9 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RLM.Business\RLM.Business.csproj" />
+    <ProjectReference Include="..\RLM.Data\RLM.Data.csproj" />
+  </ItemGroup>
+
 </Project>
