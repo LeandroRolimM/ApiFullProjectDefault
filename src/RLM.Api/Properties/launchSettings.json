@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "IIS Express": {
+    "IIS - Dev": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "api/values",
@@ -17,7 +17,15 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "RLM.Api": {
+    "IIS - Prod": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      }
+    },
+    "Self Hosting": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",
